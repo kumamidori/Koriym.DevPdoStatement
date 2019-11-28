@@ -27,7 +27,7 @@ final class QueryInterpolater
         $values = $params;
         # build a regular expression for each parameter
         foreach ($params as $key => $value) {
-            $keys[] = is_string($key) ? '/' . $key . '/' : '/[?]/';
+            $keys[] = is_string($key) ? '/:' . $key . '/' : '/[?]/';
             if (is_string($value)) {
                 $values[$key] = "'" . $value . "'";
             }

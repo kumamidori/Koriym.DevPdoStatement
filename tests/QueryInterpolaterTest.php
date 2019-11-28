@@ -34,8 +34,8 @@ class QueryInterpolaterTest extends TestCase
             [
                 'INSERT INTO user(id, name) VALUES (:id, :name)',
                 [
-                    ':id' => 1,
-                    ':name' => 'abc',
+                    'id' => 1,
+                    'name' => 'abc',
                 ],
                 "INSERT INTO user(id, name) VALUES (1, 'abc')",
             ],
